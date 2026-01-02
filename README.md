@@ -103,34 +103,6 @@ Confusion Matrix:
         Actual Genuine       150            2350
 ```
 
-
-## 🛠️ Technology Stack
-
-### Data Science & ML
-```
-Python 3.8+           - Programming language
-Scikit-learn 0.24+    - Machine Learning library
-NLTK 3.6+             - Natural Language Processing
-Pandas 1.2+           - Data manipulation & analysis
-NumPy 1.20+           - Numerical computing
-Matplotlib/Seaborn    - Data visualization
-Jupyter Notebooks     - Development & experimentation
-```
-
-### Production
-```
-Flask 2.0+            - REST API framework
-Pickle                - Model serialization
-```
-
-### Web Interface
-```
-React 19              - Frontend framework
-Vite                  - Build tool
-Tailwind CSS          - Styling
-Axios                 - HTTP client
-```
-
 ## 📈 Dataset
 
 ### Data Sources
@@ -238,24 +210,3 @@ Future enhancements:
 - [ ] Explainability features (LIME, SHAP)
 - [ ] Transfer learning from pre-trained models
 
-## 📖 How to Use the Model
-
-```python
-from pickle import load
-from sklearn.feature_extraction.text import TfidfVectorizer
-
-# Load model and vectorizer
-model = load(open('model.pkl', 'rb'))
-vectorizer = load(open('vectorizer.pkl', 'rb'))
-
-# Prepare text
-text = "Your article text here..."
-text_vector = vectorizer.transform([text])
-
-# Predict
-prediction = model.predict(text_vector)
-probability = model.predict_proba(text_vector)
-
-print(f"Prediction: {prediction[0]}")
-print(f"Confidence: {probability[0][1]:.2%}")
-```
